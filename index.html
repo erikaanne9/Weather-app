@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto+Slab:wght@200&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <form class="search" id="search-form">
+          <div class="mb-3">
+            <input
+              type="text"
+              placeholder="Search locations"
+              id="search-input"
+            />
+
+            <input type="submit" value="Search" class="btn btn-primary" />
+            <button type="button" class="btn btn-success" id="current-button">
+              Current
+            </button>
+          </div>
+        </form>
+
+        <h1 class="current-conditions">Current Weather Conditions</h1>
+        <p class="date-time"></p>
+        <span class="change-unit" id="change-unit">
+          <a href="#" id="celsius-link">°C</a>
+          |
+          <a href="#" id="farenheit-link">°F</a>
+        </span>
+
+        <div class="current-temp">
+          <div class="border border-warning rounded-circle border-2">
+            <p class="big-temp" id="big-temp">--°F</p>
+          </div>
+        </div>
+
+        <h2 class="future-conditions">5 Day Forecast</h2>
+
+        <br />
+
+        <div class="row">
+          <div class="col">Thu</div>
+          <div class="col">Fri</div>
+          <div class="col">Sat</div>
+          <div class="col">Sun</div>
+          <div class="col">Mon</div>
+        </div>
+
+        <div class="row">
+          <div class="col">☁️</div>
+          <div class="col">⛅</div>
+          <div class="col">🌧️</div>
+          <div class="col">⛅</div>
+          <div class="col">☀️</div>
+        </div>
+
+        <div class="row">
+          <div class="col">63°F</div>
+          <div class="col">65°F</div>
+          <div class="col">62°F</div>
+          <div class="col">66°F</div>
+          <div class="col">68°F</div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
